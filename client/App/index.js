@@ -26,7 +26,6 @@ export default class App extends React.Component {
     this.code = queryString.parse(location.search).c;
   }
   componentDidMount () {
-
     axios.get(`/api/users/?code=${this.code}`)
       .then(({data}) => {
         this.setState({user: data});
