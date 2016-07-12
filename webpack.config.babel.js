@@ -1,3 +1,5 @@
+import 'dotenv/config';
+import {HotModuleReplacementPlugin} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
@@ -10,13 +12,24 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" },
-      { test: /\.js$/, loader: "babel" }
+      {test: /\.css$/, loader: 'style!css'},
+      {test: /\.js$/, loader: 'react-hot!babel', exclude: /node_modules/}
     ]
   },
   plugins: [
+    new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './client/index.ejs'
     })
-  ]
+  ],
+  devServer: {
+    port: process.env.WEBPACK_PORT,
+    hot: true,
+    inline: true,
+    proxy: {
+      '/api/*': {
+        target: `http://localhost:${process.env.PORT}/`
+      }
+    }
+  }
 };

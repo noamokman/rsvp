@@ -4,7 +4,7 @@ import format from 'bunyan-format';
 const debug = std => std.isTTY ? format({outputMode: 'short', out: std}) : std;
 
 export default bunyan.createLogger({
-  name: 'Drivesense',
+  name: 'RSVP',
   src: true,
   serializers: {
     req: bunyan.stdSerializers.req,

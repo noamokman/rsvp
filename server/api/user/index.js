@@ -1,8 +1,8 @@
 import {AsyncRouter} from 'express-async-router';
-import * as controller from './user.controller';
+import {index} from './user.controller';
 
 const router = new AsyncRouter();
 
-router.get('/', controller.index);
+router.get('/', index);
 
 export default router;
