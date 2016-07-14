@@ -7,8 +7,8 @@ export default {
     main: './client/index.js'
   },
   output: {
-    path: './dist/public',
-    filename: '[name].[hash].js'
+    path: './dist/client',
+    filename: '/[name].[hash].js'
   },
   module: {
     loaders: [
@@ -26,6 +26,7 @@ export default {
     port: process.env.WEBPACK_PORT,
     hot: true,
     inline: true,
+    historyApiFallback: true,
     proxy: {
       '/api/*': {
         target: `http://localhost:${process.env.PORT}/`
