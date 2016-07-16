@@ -1,6 +1,6 @@
 export default {
   seed: () => [{
-    name: 'Noam Okman',
+    name: 'נועם אוקמן',
     phone: '0548111255',
     code: 'lol'
   }]

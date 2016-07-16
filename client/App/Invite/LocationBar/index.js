@@ -1,9 +1,10 @@
 import React from 'react';
+import {Card, CardText} from 'material-ui';
 
 export default () => {
   return (
-    <span>
-      Hello!
-    </span>
+    <Card>
+      <CardText>{'אולמי דוריה'}</CardText>
+    </Card>
   );
 };

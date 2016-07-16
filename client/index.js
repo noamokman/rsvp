@@ -11,10 +11,10 @@ injectTapEventPlugin();
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path='/' component={App}>
       <IndexRoute component={Home} />
-      <Route path="/c/:code" component={Invite} />
-      <Redirect from="/*" to="/" />
+      <Route path='/c/:code' component={Invite} />
+      <Redirect from='/*' to='/' />
     </Route>
   </Router>
 ), document.getElementById('container'));
