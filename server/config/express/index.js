@@ -3,6 +3,7 @@ import compression from 'compression';
 import {urlencoded, json} from 'body-parser';
 import methodOverride from 'method-override';
 import errorHandler from 'api-error-handler';
+import express from 'express';
 import routes from './routes';
 
 export default app => {
@@ -11,6 +12,10 @@ export default app => {
   app.use(json());
   app.use(methodOverride());
   app.use(morgan('dev'));
+
+  if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client'));
+  }
 
   routes(app);
 
