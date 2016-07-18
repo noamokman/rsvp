@@ -13,7 +13,7 @@ export default app => {
   app.use(methodOverride());
   app.use(morgan('dev'));
 
-  if(process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client'));
   }
 

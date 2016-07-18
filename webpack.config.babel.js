@@ -13,7 +13,8 @@ export default {
   module: {
     loaders: [
       {test: /\.css$/, loader: 'style!css'},
-      {test: /\.js$/, loader: 'react-hot!babel', exclude: /node_modules/}
+      {test: /\.js$/, loader: 'react-hot!babel', exclude: /node_modules/},
+      {test: /\.jpg$/, loader: 'url?name=/[hash].[ext]&limit=10000'}
     ]
   },
   plugins: [
