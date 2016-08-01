@@ -4,7 +4,10 @@ import {Card, CardText} from 'material-ui';
 export default () => {
   return (
     <Card>
-      <CardText>{'אולמי דוריה'}</CardText>
+      <CardText>
+        <span>{'אולמי דוריה'}</span>
+        <span>{'לניווט לחץ כאן'}</span>
+      </CardText>
     </Card>
   );
 };

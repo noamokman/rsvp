@@ -53,6 +53,7 @@
     "ghooks": "^1.3.2",
     "html-webpack-plugin": "^2.22.0",
     "material-ui": "^0.15.2",
+    "mdi": "^1.6.50",
     "nodemon": "^1.9.2",
     "normalize.css": "^4.2.0",
     "opn-cli": "^3.1.0",
@@ -64,6 +65,7 @@
     "react-tap-event-plugin": "latest",
     "rimraf": "^2.5.3",
     "style-loader": "^0.13.1",
+    "twilio": "^2.9.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"

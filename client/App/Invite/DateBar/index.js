@@ -4,7 +4,13 @@ import {Card, CardText} from 'material-ui';
 export default () => {
   return (
     <Card>
-      <CardText>{'28/09/2016 בשעה 19:30'}</CardText>
+      <CardText>
+        <span>{'28/09/2016 בשעה 19:30'}</span>
+        <div>
+          <i className='mdi mdi-calendar-plus' />
+          <span>{'שמור תאריך ביומן'}</span>
+        </div>
+      </CardText>
     </Card>
   );
 };
