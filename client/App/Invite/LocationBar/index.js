@@ -1,13 +1,8 @@
 import React from 'react';
-import {Card, CardText} from 'material-ui';
+import Bar from '../shared/Bar';
 
 export default () => {
   return (
-    <Card>
-      <CardText>
-        <span>{'אולמי דוריה'}</span>
-        <span>{'לניווט לחץ כאן'}</span>
-      </CardText>
-    </Card>
+    <Bar text='אולמי דוריה' iconClass='map-marker' iconText='לניווט לחץ כאן' />
   );
 };

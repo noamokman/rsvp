@@ -1,16 +1,8 @@
 import React from 'react';
-import {Card, CardText} from 'material-ui';
+import Bar from '../shared/Bar';
 
 export default () => {
   return (
-    <Card>
-      <CardText>
-        <span>{'28/09/2016 בשעה 19:30'}</span>
-        <div>
-          <i className='mdi mdi-calendar-plus' />
-          <span>{'שמור תאריך ביומן'}</span>
-        </div>
-      </CardText>
-    </Card>
+    <Bar text='28/09/2016 בשעה 19:30' iconClass='calendar-plus' iconText='שמור תאריך ביומן' />
   );
 };
