@@ -10,7 +10,7 @@ export default ({text, iconClass, iconText}) => {
             <span>{text}</span>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
-            <i className={`mdi mdi-${iconClass}`}/>
+            <i className={`mdi mdi-${iconClass}`} />
             <span>{iconText}</span>
           </div>
         </div>
