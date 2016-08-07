@@ -19,7 +19,7 @@ export default ({text, iconClass, iconText, clickAction}) => {
   const textWrapperStyle = {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'center'
   };
 
   return (
@@ -30,7 +30,7 @@ export default ({text, iconClass, iconText, clickAction}) => {
             <span style={textStyle}>{text}</span>
           </div>
           <div style={iconPanelStyle} onClick={clickAction}>
-            <i className={`mdi mdi-36px mdi-${iconClass}`}/>
+            <i className={`mdi mdi-36px mdi-${iconClass}`} />
             <span>{iconText}</span>
           </div>
         </div>
