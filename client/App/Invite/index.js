@@ -12,8 +12,8 @@ const style = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'center',
-    height: '100%'
+    height: '100%',
+    padding: '2%'
   }
 };
 

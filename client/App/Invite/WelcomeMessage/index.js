@@ -3,6 +3,7 @@ import React from 'react';
 const style = {
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
   color: '#99835A',
   fontWeight: 'bold',
   fontSize: '22pt'
