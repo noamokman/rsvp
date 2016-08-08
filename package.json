@@ -15,7 +15,8 @@
     "dev": "concurrent \"npm run client-dev\" \"npm run server-dev\" \"npm run open\"",
     "open": "opn http://localhost:9001/",
     "test": "npm run lint",
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "deploy": "npm run build && cd dist && git init && heroku git:remote -a rsvp-wedding && git add . && git commit -m \"stuff\" && git push -f -u \"heroku\" master"
   },
   "config": {
     "ghooks": {
