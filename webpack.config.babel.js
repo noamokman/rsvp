@@ -26,6 +26,7 @@ export default {
   ],
   devServer: {
     port: process.env.WEBPACK_PORT,
+    host: '0.0.0.0',
     hot: true,
     inline: true,
     historyApiFallback: true,
