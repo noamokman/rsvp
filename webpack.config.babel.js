@@ -1,6 +1,21 @@
 import 'dotenv/config';
-import {HotModuleReplacementPlugin} from 'webpack';
+import {HotModuleReplacementPlugin, DefinePlugin} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+const plugins = [
+  new HotModuleReplacementPlugin(),
+  new HtmlWebpackPlugin({
+    template: './client/index.ejs'
+  })
+];
+
+if(process.env.NODE_ENV === 'production') {
+  plugins.push(new DefinePlugin({
+    'process.env': {
+      'NODE_ENV': '"production"'
+    }
+  }));
+}
 
 export default {
   entry: {
@@ -18,12 +33,7 @@ export default {
       {test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file?name=/[hash].[ext]'}
     ]
   },
-  plugins: [
-    new HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './client/index.ejs'
-    })
-  ],
+  plugins,
   devServer: {
     port: process.env.WEBPACK_PORT,
     host: '0.0.0.0',
