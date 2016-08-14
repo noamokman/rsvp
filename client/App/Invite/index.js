@@ -3,7 +3,7 @@ import WelcomeMessage from './WelcomeMessage';
 import LocationBar from './LocationBar';
 import DateBar from './DateBar';
 import Photo from './Photo';
-import ConfirmationBar from './ConfirmationBar';
+import ConfirmationPanel from './ConfirmationPanel';
 import axios from 'axios';
 import {browserHistory} from 'react-router';
 
@@ -39,7 +39,7 @@ export default class Invite extends Component {
         <LocationBar />
         <DateBar />
         <Photo />
-        <ConfirmationBar />
+        <ConfirmationPanel />
       </div>
     );
   }
