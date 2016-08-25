@@ -9,7 +9,7 @@ const UserSchema = new Schema({
     required: true
   },
   code: String,
-  status: String
+  num: Number
 });
 
 export default createSeedModel('User', UserSchema, seed);

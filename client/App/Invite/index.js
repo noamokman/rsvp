@@ -6,6 +6,8 @@ import Photo from './Photo';
 import ConfirmationPanel from './ConfirmationPanel';
 import axios from 'axios';
 import {browserHistory} from 'react-router';
+import update from 'react-addons-update';
+
 
 const style = {
   wrapper: {
@@ -22,6 +24,7 @@ export default class Invite extends Component {
     super(props);
     this.state = {user: {name: null}};
   }
+
   componentDidMount () {
     axios.get(`/api/users/${this.props.params.code}`)
       .then(({data}) => {
@@ -32,6 +35,21 @@ export default class Invite extends Component {
         browserHistory.push('/');
       });
   }
+
+  changeNum (num) {
+    axios.put(`/api/users/${this.props.params.code}`, {num})
+      .then(() => {
+        const newState = update(this.state, {
+          user: {num: {$set: num}}
+        });
+
+        this.setState(newState);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   render () {
     return (
       <div style={style.wrapper}>
@@ -39,7 +57,7 @@ export default class Invite extends Component {
         <LocationBar />
         <DateBar />
         <Photo />
-        <ConfirmationPanel />
+        <ConfirmationPanel currentNum={this.state.user.num} changeNumAction={num => this.changeNum(num)} />
       </div>
     );
   }

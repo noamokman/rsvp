@@ -11,7 +11,6 @@ export default class ConfirmationPanel extends Component {
   }
 
   handleTouchTap (event) {
-    // This prevents ghost click.
     event.preventDefault();
 
     this.setState({
@@ -22,9 +21,10 @@ export default class ConfirmationPanel extends Component {
 
   handleRequestClose (num) {
     this.setState({
-      open: false,
-      num
+      open: false
     });
+
+    this.props.changeNumAction(num);
   }
 
   render () {
@@ -49,9 +49,10 @@ export default class ConfirmationPanel extends Component {
             </Menu>
           </Popover>
 
-          <RaisedButton label='אולי מגיע' />
-          <RaisedButton label='לא מגיע' />
+          <RaisedButton label='אולי מגיע' onTouchTap={() => this.handleRequestClose(-1)} />
+          <RaisedButton label='לא מגיע' onTouchTap={() => this.handleRequestClose(0)} />
         </div>
+        <span>{`num: ${this.props.currentNum}`}</span>
       </div>
     );
   }

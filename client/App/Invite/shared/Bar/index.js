@@ -1,35 +1,36 @@
 import React from 'react';
 import {Card, CardText} from 'material-ui';
 
-export default ({text, iconClass, iconText, clickAction}) => {
-  const containerStyle = {
+const styles = {
+  container: {
     display: 'flex',
     justifyContent: 'space-between'
-  };
-  const iconPanelStyle = {
+  },
+  iconPanel: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     cursor: 'pointer'
-  };
-  const textStyle = {
+  },
+  textStyle: {
     fontSize: '24pt'
-  };
-
-  const textWrapperStyle = {
+  },
+  textWrapper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
-  };
+  }
+};
 
+export default ({text, iconClass, iconText, clickAction}) => {
   return (
     <Card>
       <CardText>
-        <div style={containerStyle}>
-          <div style={textWrapperStyle}>
-            <span style={textStyle}>{text}</span>
+        <div style={styles.container}>
+          <div style={styles.textWrapper}>
+            <span style={styles.textStyle}>{text}</span>
           </div>
-          <div style={iconPanelStyle} onClick={clickAction}>
+          <div style={styles.iconPanel} onClick={clickAction}>
             <i className={`mdi mdi-36px mdi-${iconClass}`} />
             <span>{iconText}</span>
           </div>
