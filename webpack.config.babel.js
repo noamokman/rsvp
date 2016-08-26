@@ -29,7 +29,7 @@ export default {
     loaders: [
       {test: /\.css$/, loader: 'style!css'},
       {test: /\.js$/, loader: 'react-hot!babel', exclude: /node_modules/},
-      {test: /\.jpg$/, loader: 'url?name=/[hash].[ext]&limit=10000'},
+      {test: /\.jp(e)?g$/, loader: 'url?name=/[hash].[ext]&limit=10000'},
       {test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file?name=/[hash].[ext]'}
     ]
   },

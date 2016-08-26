@@ -12,10 +12,20 @@ import update from 'react-addons-update';
 const style = {
   wrapper: {
     display: 'flex',
+    flexDirection: 'row',
+    flex: 1,
+    padding: '16px',
+    justifyContent: 'center'
+  },
+  container: {
+    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
-    height: '100%',
-    padding: '2%'
+    flex: 1
+  },
+  confirmationWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
   }
 };
 
@@ -53,11 +63,15 @@ export default class Invite extends Component {
   render () {
     return (
       <div style={style.wrapper}>
-        <WelcomeMessage name={this.state.user.name} />
-        <LocationBar />
-        <DateBar />
-        <Photo />
-        <ConfirmationPanel currentNum={this.state.user.num} changeNumAction={num => this.changeNum(num)} />
+        <div style={style.container}>
+          <WelcomeMessage name={this.state.user.name} />
+          <LocationBar />
+          <DateBar />
+          <Photo />
+          <div style={style.confirmationWrapper}>
+            <ConfirmationPanel currentNum={this.state.user.num} changeNumAction={num => this.changeNum(num)}/>
+          </div>
+        </div>
       </div>
     );
   }

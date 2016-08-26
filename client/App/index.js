@@ -5,7 +5,8 @@ const style = {
   wrapper: {
     background: '#E8E8E8',
     height: '100vh',
-    direction: 'rtl'
+    direction: 'rtl',
+    display: 'flex'
   }
 };
 
