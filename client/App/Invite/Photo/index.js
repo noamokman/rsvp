@@ -14,7 +14,7 @@ const style = {
 export default () => {
   return (
     <div style={style.wrapper}>
-      <img src={img} style={style.image}/>
+      <img src={img} style={style.image} />
     </div>
   );
 };

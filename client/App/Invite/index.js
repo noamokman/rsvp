@@ -69,7 +69,7 @@ export default class Invite extends Component {
           <DateBar />
           <Photo />
           <div style={style.confirmationWrapper}>
-            <ConfirmationPanel currentNum={this.state.user.num} changeNumAction={num => this.changeNum(num)}/>
+            <ConfirmationPanel currentNum={this.state.user.num} changeNumAction={num => this.changeNum(num)} />
           </div>
         </div>
       </div>
