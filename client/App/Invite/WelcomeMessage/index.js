@@ -7,7 +7,7 @@ const style = {
     alignItems: 'center',
     color: '#99835A',
     fontWeight: 'bold',
-    fontSize: '4em',
+    fontSize: '2em',
     marginBottom: '16px'
   },
   comeCelebrate: {

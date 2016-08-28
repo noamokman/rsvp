@@ -16,7 +16,7 @@ const styles = {
     cursor: 'pointer'
   },
   textStyle: {
-    fontSize: '24pt'
+    fontSize: '12pt'
   },
   textWrapper: {
     display: 'flex',
@@ -35,7 +35,7 @@ export default ({text, iconClass, iconText, clickAction}) => {
               <span style={styles.textStyle}>{text}</span>
             </div>
             <div style={styles.iconPanel} onClick={clickAction}>
-              <i className={`mdi mdi-36px mdi-${iconClass}`} />
+              <i className={`mdi mdi-24px mdi-${iconClass}`} />
               <span>{iconText}</span>
             </div>
           </div>

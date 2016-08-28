@@ -11,7 +11,8 @@ const style = {
   text: {
     color: '#99835A',
     fontWeight: 'bold',
-    fontSize: '3em'
+    fontSize: '1.5em',
+    margin: '8px'
   }
 };
 
@@ -38,7 +39,9 @@ export default class ConfirmationPanel extends Component {
       open: false
     });
 
-    this.props.changeNumAction(num);
+    if (typeof num === 'number') {
+      this.props.changeNumAction(num);
+    }
   }
 
   render () {
@@ -49,7 +52,7 @@ export default class ConfirmationPanel extends Component {
           <RaisedButton
             backgroundColor={this.props.currentNum > 0 ? greenA400 : ''}
             onTouchTap={event => this.handleTouchTap(event)}
-            label='מגיע'
+            label={this.props.currentNum > 1 ? `מגיעים (${this.props.currentNum})` : 'מגיע'}
           />
           <Popover
             open={this.state.open}
@@ -79,7 +82,6 @@ export default class ConfirmationPanel extends Component {
             labelColor={this.props.currentNum === 0 ? 'white' : ''}
           />
         </div>
-        <span>{`num: ${this.props.currentNum}`}</span>
       </div>
     );
   }

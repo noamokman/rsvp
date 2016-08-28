@@ -1,5 +1,5 @@
-import 'normalize.css';
 import 'mdi/css/materialdesignicons.css';
+import './style.css';
 import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {render} from 'react-dom';

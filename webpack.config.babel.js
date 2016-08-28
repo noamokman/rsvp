@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 const plugins = [
   new HotModuleReplacementPlugin(),
   new HtmlWebpackPlugin({
-    template: './client/index.ejs'
+    template: './client/index.html'
   })
 ];
 
