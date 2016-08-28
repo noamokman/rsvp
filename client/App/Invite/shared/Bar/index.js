@@ -13,7 +13,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    width: '60px'
   },
   textStyle: {
     fontSize: '1.5em'
