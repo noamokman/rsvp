@@ -16,12 +16,16 @@ const styles = {
     cursor: 'pointer'
   },
   textStyle: {
-    fontSize: '12pt'
+    fontSize: '1.5em'
   },
   textWrapper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
+  },
+  iconText: {
+    fontSize: '0.75em',
+    textAlign: 'center'
   }
 };
 
@@ -36,7 +40,7 @@ export default ({text, iconClass, iconText, clickAction}) => {
             </div>
             <div style={styles.iconPanel} onClick={clickAction}>
               <i className={`mdi mdi-24px mdi-${iconClass}`} />
-              <span>{iconText}</span>
+              <span style={styles.iconText}>{iconText}</span>
             </div>
           </div>
         </CardText>

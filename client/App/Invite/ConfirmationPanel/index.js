@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {RaisedButton, Popover, Menu, MenuItem} from 'material-ui';
 import {greenA400, yellowA400, redA400} from 'material-ui/styles/colors';
 
-const style = {
+const styles = {
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -12,6 +12,9 @@ const style = {
     color: '#99835A',
     fontWeight: 'bold',
     fontSize: '1.5em',
+    margin: '8px'
+  },
+  buttonBar: {
     margin: '8px'
   }
 };
@@ -46,9 +49,9 @@ export default class ConfirmationPanel extends Component {
 
   render () {
     return (
-      <div style={style.wrapper}>
-        <span style={style.text}>{'אשרו את הגעתכם'}</span>
-        <div>
+      <div style={styles.wrapper}>
+        <span style={styles.text}>{'אשרו את הגעתכם'}</span>
+        <div style={styles.buttonBar}>
           <RaisedButton
             backgroundColor={this.props.currentNum > 0 ? greenA400 : ''}
             onTouchTap={event => this.handleTouchTap(event)}
